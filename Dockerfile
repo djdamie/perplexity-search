@@ -17,4 +17,4 @@ RUN npm run build
 EXPOSE 3000
 
 # Run the server
-CMD [ "node", "dist/index.js" ]
+ENTRYPOINT ["sh", "-c", "node dist/index.js --sse --port $PORT"]
